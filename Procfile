@@ -1,1 +1,1 @@
-web: gunicorn bellagora:bellagora
+web: gunicorn app:app
