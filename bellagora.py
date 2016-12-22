@@ -21,7 +21,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gibbi3:algernon7@localhost
 db = SQLAlchemy(app)
 heroku = Heroku(app)
 
-app.wsgi_app = ProxyFix(app.wsgi_app)
+bellagora.wsgi_app = ProxyFix(bellagora.wsgi_app)
 
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
