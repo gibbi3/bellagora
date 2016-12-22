@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_heroku import Heroku
 
 import psycopg2
+import urlparse
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -21,6 +22,17 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gibbi3:algernon7@localhost/stock'
 db = SQLAlchemy(app)
 heroku = Heroku(app)
+
+urlparse.uses_netloc.append("postgres")
+url = urlparse.urlparse(os.environ["DATABASE_URL"])
+
+conn = psycopg2.connect(
+    database=url.path[1:],
+    user=url.username,
+    password=url.password,
+    host=url.hostname,
+    port=url.port
+)
 
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
