@@ -16,7 +16,7 @@ from flask import make_response
 import requests
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gibbi3:algernon7@localhost/stock'
+app.config.from_object('config')
 db = SQLAlchemy(app)
 heroku = Heroku(app)
 
