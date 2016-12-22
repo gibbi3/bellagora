@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-from flask_sqlalchemy import SQLAlchemy
 from flask_heroku import Heroku
-from werkzeug.contrib.fixers import ProxyFix
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -18,10 +16,7 @@ import requests
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gibbi3:algernon7@localhost/stock'
-db = SQLAlchemy(app)
 heroku = Heroku(app)
-
-bellagora.wsgi_app = ProxyFix(bellagora.wsgi_app)
 
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
