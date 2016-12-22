@@ -18,7 +18,7 @@ import requests
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gibbi3:algernon7@localhost/stock'
 db = SQLAlchemy(app)
-heroku = Heroku(bellagora)
+heroku = Heroku(app)
 
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
