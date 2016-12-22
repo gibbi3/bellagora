@@ -19,7 +19,7 @@ from flask import make_response
 import requests
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = '   postgres://ickglujejtdxpz:d7c478bee7612d7631dad7b97c22edbb918a90ae4c6be464806f741e70cb36e2@ec2-54-163-224-108.compute-1.amazonaws.com:5432/d9c9au5ku22sih'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://gibbi3:algernon7@localhost/stock'
 db = SQLAlchemy(app)
 heroku = Heroku(app)
 
@@ -37,7 +37,7 @@ conn = psycopg2.connect(
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
 
-engine = create_engine('   postgres://ickglujejtdxpz:d7c478bee7612d7631dad7b97c22edbb918a90ae4c6be464806f741e70cb36e2@ec2-54-163-224-108.compute-1.amazonaws.com:5432/d9c9au5ku22sih')
+engine = create_engine('postgresql://gibbi3:algernon7@localhost/stock')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
