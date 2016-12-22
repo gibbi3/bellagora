@@ -1,2 +1,2 @@
-web: gunicorn bellagora:bellagora
-init: python database_setup.py
+web: python bellagora.py
+init: database_setup.py
