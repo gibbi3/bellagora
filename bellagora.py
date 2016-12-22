@@ -3,7 +3,6 @@ from flask_heroku import Heroku
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, User, Category, Item
 
 from flask import session as login_session
 import random, string
