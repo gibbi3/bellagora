@@ -57,7 +57,7 @@ class Item(Base):
         }
 
 
-engine = create_engine('postgresql://gibbi3:algernon7@localhost/stock')
+engine = create_engine('postgres://ickglujejtdxpz:d7c478bee7612d7631dad7b97c22edbb918a90ae4c6be464806f741e70cb36e2@ec2-54-163-224-108.compute-1.amazonaws.com:5432/d9c9au5ku22sih')
 
 
 Base.metadata.create_all(engine)
