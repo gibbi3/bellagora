@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 
 from sqlalchemy import create_engine
