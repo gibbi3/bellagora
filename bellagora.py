@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-from flask.ext.heroku import Heroku
+from flask_heroku import Heroku
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -412,4 +412,5 @@ def disconnect():
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
-    app.run(debug = True)
+    app.debug = True
+    app.run(host = '127.0.0.1', port = 5000)
