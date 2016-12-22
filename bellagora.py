@@ -3,7 +3,6 @@ from flask_heroku import Heroku
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, User, Category, Item
 from flask import session as login_session
 import random, string
 
@@ -20,11 +19,6 @@ heroku = Heroku(app)
 
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
-
-engine = create_engine('postgresql://gibbi3:algernon7@localhost/stock')
-Base.metadata.bind = engine
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
 
 
 @app.route('/')
