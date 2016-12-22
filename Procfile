@@ -1,1 +1,1 @@
-web: python bellagora.py
+web: gunicorn app:app
