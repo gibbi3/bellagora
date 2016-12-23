@@ -61,6 +61,10 @@ input {
   text-align: center;
 }
 
+.input {
+  border-radius: 10px;
+}
+
 .input-title {
   font-size: 18px;
 }
