@@ -4,6 +4,7 @@ body {
 
 input {
   margin: 15px;
+  border-radius: 10px;
 }
 
 .jumbotron {
