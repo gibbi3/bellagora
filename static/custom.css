@@ -60,6 +60,8 @@ input {
 
 .form-container {
   text-align: center;
+  background: aliceblue;
+  border-radius: 25px;
 }
 
 .input {
