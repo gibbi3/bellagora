@@ -6,6 +6,10 @@ input {
   margin: 15px;
 }
 
+.result.img {
+  max-width: 200px;
+}
+
 .media-object {
   max-width: 100px;
   margin-left: 10px;
@@ -56,4 +60,20 @@ input {
 .input-button {
   width: 200px;
   height: 40px;
+}
+
+.login-buttons {
+  text-align: center;
+  background: aliceblue;
+  border-radius: 25px;
+  height: 50%;
+  padding: 10px;
+}
+
+.login-message {
+  margin-bottom: 40px;
+}
+
+.result {
+  text-align: center;
 }
