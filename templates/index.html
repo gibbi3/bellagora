@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <div class="container">
   <div class="jumbotron">
-    <h1 class="marquis">Welcome<small> to the marketplace</small></h1>
+    <h1 class="marquis">Welcome<small> to the market place</small></h1>
   </div>
 </div>
 <div class="container">
@@ -18,15 +17,15 @@
       </div>
     </div>
   </div>
-</div>
-<div class="front-banner">
-  <div class="col-md-8">
-    <img src="/static/img/Minoan.png" class="banner-pic" alt="three Minoan women">
-  </div>
-  {% if 'username' in session %}
-    <div class='footer'>
-        <a href="{{ url_for('newCategory') }}">Create New Category</a>
+  <div class="front-banner">
+    <div class="col-md-8">
+      <img src="/static/img/Minoan.png" class="banner-pic" alt="three Minoan women">
     </div>
-  {% endif %}
+    {% if 'username' in session %}
+    <div class='footer'>
+      <a href="{{ url_for('newCategory') }}">Create New Category</a>
+    </div>
+    {% endif %}
+  </div>
 </div>
 {% endblock %}
