@@ -15,17 +15,19 @@
             <br><br><br>
           {% endfor %}
       </div>
+        {% if 'username' in session %}
+          <ul class="nav nav-pills">
+            <li role="presentation" class="active">
+              <a href="{{url_for('newCategory')}}">Create Category
+              </a></li>
+          </ul>
+        {% endif %}
     </div>
   </div>
   <div class="front-banner">
     <div class="col-md-8">
       <img src="/static/img/Minoan.png" class="banner-pic" alt="three Minoan women">
     </div>
-    {% if 'username' in session %}
-    <div class='footer'>
-      <a href="{{ url_for('newCategory') }}">Create New Category</a>
-    </div>
-    {% endif %}
   </div>
 </div>
 {% endblock %}

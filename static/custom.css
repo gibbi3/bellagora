@@ -6,8 +6,8 @@ input {
   margin: 15px;
 }
 
-.result.img {
-  max-width: 200px;
+.jumbotron {
+  margin-bottom: 10px;
 }
 
 .media-object {
@@ -33,6 +33,10 @@ input {
 
 .marquis {
   text-align: left;
+}
+
+.front-banner {
+  margin-top: 20px;
 }
 
 .banner-pic {
