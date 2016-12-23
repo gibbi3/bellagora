@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-  <h2>New Item</h2>
+  <h2 class="form-title">New Item</h2>
   <form action="{{url_for('newItem', category_id=category_id)}}" method = 'POST'>
-    <p>Name:</p>
+    <p class="input-title">Name:</p>
       <input type='text' size='30' name='name'>
       <br>
-    <p>Description:</p>
-      <input type='text' size='150' name='description'>
+    <p class="input-title">Description:</p>
+      <input type='text' size='100' name='description'>
       <br>
-    <p>Price:</p>
+    <p class="input-title">Price:</p>
        <input type='text' size='30' name='price'>
        <br><br>
-    <p>Picture URL:</p>
-       <input type='text' size='200' name='picture'>
+    <p class="input-title">Picture URL:</p>
+       <input type='text' size='100' name='picture'>
        <br><br>
        <input type='submit' value='Create'>
   </form>
