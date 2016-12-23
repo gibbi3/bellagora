@@ -1,3 +1,11 @@
+body {
+  margin-bottom: 50px;
+}
+
+input {
+  margin: 15px;
+}
+
 .media-object {
   max-width: 100px;
   margin-left: 10px;
@@ -35,4 +43,17 @@
 .alert-success {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.form-title {
+  margin-bottom: 40px;
+}
+
+.input-title {
+  font-size: 18px;
+}
+
+.input-button {
+  width: 200px;
+  height: 40px;
 }
