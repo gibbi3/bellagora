@@ -42,11 +42,13 @@
     <br><br>
     <hr>
       {% endfor %}
+      {% if 'username' in session %}
       <ul class="nav nav-pills">
         <li role="presentation" class="active">
           <a href="{{url_for('newItem', category_id = category.id )}}">Add Item
           </a></li>
       </ul>
+      {% endif %}
     <br>
 </div>
 {% endblock %}
