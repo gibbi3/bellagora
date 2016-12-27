@@ -361,7 +361,7 @@ def gconnect():
 @app.route('/gdisconnect')
 def gdisconnect():
     access_token = login_session.get('access_token')
-    print 'In gdisconnect access token is %s', access_token
+    print 'In gdisconnect access token is %s', % access_token
     print 'User name is: '
     print login_session.get('username')
     if access_token is None:
