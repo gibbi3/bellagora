@@ -168,7 +168,9 @@ def categoryStockJSON(category_id):
 @app.route('/bellagora/<int:category_id>/<int:item_id>/JSON/')
 def itemJSON(category_id, item_id):
     item = session.query(Item).filter_by(id=item_id).one()
-    return jsonify(Item=item.serialize)
+    category = session.query(Category).filter_by(id=category_id).one()
+    if item.category_id == category.id:
+        return jsonify(Item=item.serialize)
 
 
 def createUser(login_session):
